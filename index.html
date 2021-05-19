@@ -17,14 +17,20 @@
 <body>
     <h1>Lista di cose da fare!</h1>
     <div id="root">
-        <ul v-if="toDoList.length >0">
-            <li v-for="todo,index in toDoList">
-                <i class="fas fa-circle"></i>
-                <span class="todo-text">{{todo.toDoTitle}}</span>
-                <i @click="removeItem(index)" class="fas fa-times-circle"></i>
-            </li>
-        </ul>
-        <h2 v-else>Non ci sono cose da fare!</h1>
+        <div class="input-to-do">
+            <input type="text" placeholder="Inserisci una cosa da fare!" v-model="toDoString" @keyup.enter="submit">
+            <button @click="submit">Invia!</button>
+        </div>
+        <div class="to-do-block">
+            <ul v-if="toDoList.length >0">
+                <li v-for="todo,index in toDoList">
+                    <i class="fas fa-circle"></i>
+                    <span class="todo-text">{{todo.toDoTitle}}</span>
+                    <i @click="removeItem(index)" class="fas fa-times-circle"></i>
+                </li>
+            </ul>
+            <h2 v-else>Non ci sono cose da fare!</h1>
+        </div>
     </div>
     <script src="js/script.js" type="text/javascript"></script>
 </body>
