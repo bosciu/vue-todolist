@@ -15,7 +15,17 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <h1>Lista di cose da fare!</h1>
+    <div id="root">
+        <ul v-if="toDoList.length >0">
+            <li v-for="todo,index in toDoList">
+                <i class="fas fa-circle"></i>
+                <span class="todo-text">{{todo.toDoTitle}}</span>
+                <i @click="removeItem(index)" class="fas fa-times-circle"></i>
+            </li>
+        </ul>
+        <h2 v-else>Non ci sono cose da fare!</h1>
+    </div>
     <script src="js/script.js" type="text/javascript"></script>
 </body>
 

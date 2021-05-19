@@ -1,3 +1,5 @@
+/* COMMON */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +8,47 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+
+/* TEXT RULES */
+
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+
+/* APP */
+
+#root {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.fa-circle {
+    font-size: 10px;
+}
+
+.fa-times-circle {
+    margin: 0 5px;
+    cursor: pointer;
+    color: red;
+}
+
+.todo-text {
+    margin: 0 15px;
 }
