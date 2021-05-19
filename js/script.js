@@ -34,7 +34,11 @@ const app = new Vue({
             }
         },
         setCompleted: function(removedIndex) {
-            this.toDoList[removedIndex].completed = true;
+            if (this.toDoList[removedIndex].completed == false) {
+                this.toDoList[removedIndex].completed = true;
+            } else {
+                this.toDoList[removedIndex].completed = false;
+            }
         }
     }
 });
