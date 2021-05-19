@@ -32,6 +32,9 @@ const app = new Vue({
                 });
                 this.toDoString = "";
             }
+        },
+        setCompleted: function(removedIndex) {
+            this.toDoList[removedIndex].completed = true;
         }
     }
 });
